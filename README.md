@@ -39,16 +39,14 @@ It is responsible for data retrieval and repository interface implementations. I
 - It extends entity
 - It is the extension of the entity that allows the entity to remain independent of the other layers
 
-The Domain Layer is not always required but for complicated apps it can have its advantages, primarily with the usecases, that allow for easy resusability and testing of code while restricting the access between the UI and the data layers, 
-As for the entity in domain vs model in data layer, properly distinguishing the two can be quite difficult and the line between them is blurry. But my understanding of an entity at least in relation to this progect is a presentation of a real world object bearing its properties but no methods that alter these properties (for this progect the properties of the ArticleEntity where made immutable), the model however should extend the entity and contain methods that alter these properties or the model itself. The model is meant to be a way for the domain layer entity to remain independent of all other layers. although the entity is defined as a parameter for certain functions at certain points in this progect which i found confusing. Currently I cant think of any reason why the entity folder is needed and the model on its own is just fine but perhaps ther is some usecase when it comes to multiple models that extend the same entity
+ The Domain Layer is not always required but for complicated apps it can have its advantages, primarily with the usecases, that allow for easy resusability and testing of code while restricting the access between the UI and the data layers.
+ 
+ As for the entity in domain vs model in data layer, properly distinguishing the two can be quite difficult and the line between them is blurry but my understanding of an entity at least in relation to this progect is a presentation of a real world object bearing its properties while having no methods that alter these properties (for this progect the properties of the ArticleEntity where made immutable), the model however should extend the entity and contain methods that alter these properties or the model itself. The model is meant to be a way for the domain layer entity to remain independent of all other layers. although the entity is defined as a parameter for certain functions at certain points in this progect which i found confusing. Currently I cant think of any reason why the entity folder is needed and the model on its own is just fine but perhaps ther is some usecase when it comes to multiple models that extend the same entity
 
-
-
-## Assets
-
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
-
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
+## Packages Used
+- flutter_bloc: ^8.1.5
+- equatable: ^2.0.5
+- retrofit
+- floor
+- get_it
 
